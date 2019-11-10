@@ -12,19 +12,19 @@
 
 int op_string(va_list form)
 {
-	int lenghts;
+	int length_s;
 	char *str = va_arg(form, char *);
 
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-	lenghts = 0;
-	while (str[lenghts])
+	length_s = 0;
+	while (str[length_s])
 	{
-		lenghts += _putchar(str[lenghts]);
+		length_s += _putchar(str[length_s]);
 	}
-	return (lenghts);
+	return (length_s);
 }
 /**
  * op_reverse - print character
@@ -34,21 +34,21 @@ int op_string(va_list form)
  */
 int  op_reverse(va_list form)
 {
-	int i = 0, lenghtr = 0;
+	int i = 0, length_r = 0;
 	char *str = va_arg(form, char *);
 
 	while (str[i] != '\0')
 	{
 		i++;
 	}
-	lenghtr = i;
+	length_r = i;
 	i--;
 	while (i >= 0)
 	{
 		_putchar(str[i]);
 		i--;
 	}
-	return (lenghtr);
+	return (length_r);
 }
 /**
  * op_character - print character
@@ -59,10 +59,10 @@ int  op_reverse(va_list form)
 
 int op_character(va_list form)
 {
-	int lenghtc = 0;
+	int length_c = 0;
 
-	lenghtc = _putchar(va_arg(form, int));
-	return (lenghtc);
+	length_c = _putchar(va_arg(form, int));
+	return (length_c);
 }
 
 
@@ -76,29 +76,29 @@ int op_character(va_list form)
 int op_integer(va_list form)
 {
 	int integer = va_arg(form, int);
-	int div = 1;
-	int lenghti = 0;
+	int divide = 1;
+	int length_i = 0;
 	unsigned int number;
 
 	if (integer < 0)
 	{
-		lenghti += _putchar('-');
+		length_i += _putchar('-');
 		number = integer * -1;
 	}
 	else
 		number = integer;
 
-	while (number / div > 9)
-		div *= 10;
+	while (number / divide > 9)
+		divide *= 10;
 
-	while (div != 0)
+	while (divide != 0)
 	{
-		lenghti += _putchar('0' + number / div);
-		number %= div;
-		div /= 10;
+		length_i += _putchar('0' + number / divide);
+		number %= divide;
+		divide /= 10;
 	}
 
-	return (lenghti);
+	return (length_i);
 }
 
 /**

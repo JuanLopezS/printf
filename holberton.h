@@ -27,5 +27,6 @@ int op_rot13(va_list form);
 int validator(const char *format, va_list print1, MyPrint *ops1);
 int op_binary(va_list form);
 int op_octal(va_list form);
+int op_unsigned_decimal(va_list form);
 
 #endif

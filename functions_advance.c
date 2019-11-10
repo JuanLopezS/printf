@@ -95,3 +95,28 @@ int op_octal(va_list form)
 	}
 	return (count);
 }
+
+/**
+ * op_unsigned_decimal - prints an unsigned decimal number
+ * @form: number to convert to unsigned decimal
+ *
+ * Return: number of characters
+ */
+
+int op_unsigned_decimal(va_list form)
+{
+	int count = 0;
+	unsigned int number = va_arg(form, unsigned int);
+	int divide = 1;
+
+	while (number / divide > 9)
+		divide *= 10;
+
+	while (divide > 0)
+	{
+		count += _putchar(number / divide + '0');
+	       	number %= divide;
+		divide /= 10;
+	}
+	return (count);
+}

@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"R", op_rot13},
 		{"b", op_binary},
 		{"o", op_octal},
+		{"u", op_unsigned_decimal},
 	};
 
 	if (format == NULL)
