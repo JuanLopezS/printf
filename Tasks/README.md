@@ -138,7 +138,7 @@ Create a man page for your function.
 
 Handle the following custom conversion specifiers:
 
-# `b`: the unsigned int argument is converted to binary
+* `b`: the unsigned int argument is converted to binary
 ```
 alex@ubuntu:~/c/printf$ cat main.c
 #include "holberton.h"
