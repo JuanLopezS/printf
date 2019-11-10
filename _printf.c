@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"r", op_reverse},
 		{"R", op_rot13},
 		{"b", op_binary},
+		{"o", op_octal},
 	};
 
 	if (format == NULL)

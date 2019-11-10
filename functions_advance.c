@@ -39,34 +39,59 @@ int op_rot13(va_list form)
 }
 
 /**
- * print_binary - Function that prints the binary representation of a number.
- * Prototype: void print_binary(unsigned long int n);
- * @n: number to convert to binary
- * You are not allowed to use arrays
- * You are not allowed to use malloc
- * You are not allowed to use the % or / operators
+ * op_binary - Function that prints the binary representation of a number.
+ * @form: number to convert to binary
+ * Return: return the number of characters.
  */
 int op_binary(va_list form)
 {
 	int count = 0;
 	unsigned int num = va_arg(form, unsigned int);
-	int arr[sizeof(unsigned int) * 8 + 1];
+	int bin[sizeof(unsigned int) * 8 + 1];
 	int i = 0;
 
 	if (num == 0)
 		return (_putchar('0'));
 	while (num > 0)
 	{
-		arr[i] = num % 2;
+		bin[i] = num % 2;
 		num /= 2;
 		i++;
 	}
 	i--;
 	while (i >= 0)
 	{
-		_putchar(arr[i] + '0');
+		_putchar(bin[i] + '0');
 		count++;
 		i--;
+	}
+	return (count);
+}
+
+/**
+ * op_octal - Function that prints the octal representation of a number.
+ * @form: number to convert to octal
+ * Return: return the number of characters.
+ */
+int op_octal(va_list form)
+{
+	int count = 0, i = 0;
+	unsigned int num = va_arg(form, unsigned int);
+	int octal[sizeof(int) * 8 + 1];
+
+
+	while (num >= 8)
+	{
+		octal[i] = num % 8;
+		num /= 8;
+		i++;
+	}
+	octal[i] = num;
+
+	while (i >= 0)
+	{
+		_putchar(octal[i] + '0');
+		count++, i--;
 	}
 	return (count);
 }
