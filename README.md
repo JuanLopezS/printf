@@ -8,7 +8,7 @@ We build to printf function receive user input and prints to the standard output
 
 FORMAT outputs a specified format relative to the specifier input.
 
-<img src="https://i.ytimg.com/vi/mZFdyoZhUb4/maxresdefault.jpg" alt="Printf" width="400" height="300">
+<img src="https://i.ytimg.com/vi/mZFdyoZhUb4/maxresdefault.jpg" alt="Printf" width="500" height="400">
 
 ![Printf](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Printf.svg/700px-Printf.svg.png)
 
