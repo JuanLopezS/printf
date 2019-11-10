@@ -115,7 +115,7 @@ int op_unsigned_decimal(va_list form)
 	while (divide > 0)
 	{
 		count += _putchar(number / divide + '0');
-	       	number %= divide;
+		number %= divide;
 		divide /= 10;
 	}
 	return (count);

@@ -23,6 +23,9 @@ int _printf(const char *format, ...)
 		{"b", op_binary},
 		{"o", op_octal},
 		{"u", op_unsigned_decimal},
+		{"x", op_hex},
+		{"X", op_HEX},
+
 	};
 
 	if (format == NULL)
