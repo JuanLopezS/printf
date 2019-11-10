@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"d", op_integer},
 		{"r", op_reverse},
 		{"R", op_rot13},
+		{"b", op_binary},
 	};
 
 	if (format == NULL)
