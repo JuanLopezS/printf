@@ -26,6 +26,7 @@ int _printf(const char *format, ...)
 		{"x", op_hex},
 		{"X", op_HEX},
 		{"S", op_SString},
+		{"p", op_address},
 	};
 
 	if (format == NULL)
