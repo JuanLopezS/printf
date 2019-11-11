@@ -30,5 +30,6 @@ int op_octal(va_list form);
 int op_unsigned_decimal(va_list form);
 int op_hex(va_list form);
 int op_HEX(va_list form);
+int op_SString(va_list form);
 
 #endif
